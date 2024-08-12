@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Login Form</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div id="contenedor " class="contenedor" style="display: block;">
+    <img class="wave" src="../js/login/img/wave.png">
+    <div class="container">
+      <div class="img">
+        <div class="sprite"></div>
+      </div>
+      <div class="login-content">
+        <form  id="form_login">
+          <h2 class="title">Inicio sesión</h2>
+          <div class="input-div one">
+            <div class="i">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="div">
+              <h5>Email</h5>
+              <input type="email"  required id="email" class="input">
+            </div>
+          </div>
+          <div class="input-div pass">
+            <div class="i">
+              <i class="fas fa-lock"></i>
+            </div>
+            <div class="div">
+              <h5>Password</h5>
+              <input type="password" id="password"  required class="input">
+            </div>
+          </div>
+          <a href="#" onclick="registrocuenta()" id="crearcuenta">Create account</a>
+          <a id="contraseña" onclick="recuperarcuenta()" href="#">Forgot Password?</a>
+          <input type="submit" id="inicios" class="btn" value="Login">
+          <button type="button" id="googlelogin" class="btn-boton">
+            Login with google
+            <i id="googleicon" class="bi bi-google"></i>
+          </button>
+          <button type="button" id="invited" class="btn-boton">
+            Login Invited
+            <i class="bi bi-person"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="contenedor-create" style="display: none;">
+    <img class="wave" src="../js/login/img/wave.png">
+    <div class="container">
+      <div class="img">
+        <div class="sprite-spider"></div>
+      </div>
+      <div class="login-content">
+        <form id="form_create">
+          <h2 class="title">Crear cuenta</h2>
+		  <div class="input-div one">
+            <div class="i">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="div">
+              <h5>Usuario</h5>
+              <input type="text" id="usuario" required class="input">
+            </div>
+          </div>
+          <div class="input-div one">
+            <div class="i">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="div">
+              <h5>Email</h5>
+              <input type="email" id="email_up" required class="input">
+            </div>
+          </div>
+          <div class="input-div pass">
+            <div class="i">
+              <i class="fas fa-lock"></i>
+            </div>
+            <div class="div">
+              <h5>Password</h5>
+              <input type="password" id="password_up" required class="input">
+            </div>
+          </div>
+		  <input type="submit" class="btn" value="Crear cuenta">
+          <button type="button" class="btn" onclick="volverInicio()">Volver al inicio</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="contenedor-recuperar" style="display: none;">
+    <img class="wave" src="../js/login/img/wave.png">
+    <div class="container">
+      <div class="img">
+        <div class="sprite-conejo"></div>
+      </div>
+      <div class="login-content">
+        <form id="form_r">
+          <h2 class="title">Recuperar cuenta</h2>
+          <div class="input-div one">
+            <div class="i">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="div">
+              <h5>Email</h5>
+              <input type="email" id="recuperar" required class="input">
+            </div>
+          </div>
+          <input type="submit" class="btn" value="Recuperar cuenta">
+          <button type="button" class="btn" onclick="volverInicio()">Volver al inicio</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <script type="module" src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+  <script type="module" src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+  <script type="module" src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+  <script type="module"  src="../js/login/main.js"></script>
+
+
+</body>
+</html>
